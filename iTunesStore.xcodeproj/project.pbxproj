@@ -56,12 +56,10 @@
 		F3A5A21026D0E9D90078457F /* iTunesStore */ = {
 			isa = PBXGroup;
 			children = (
-				F3A5A21126D0E9D90078457F /* iTunesStoreApp.swift */,
-				F3A5A21326D0E9D90078457F /* ContentView.swift */,
-				F3A5A21526D0E9DA0078457F /* Assets.xcassets */,
-				F3A5A21A26D0E9DA0078457F /* Persistence.swift */,
+				F3A5A22626D0EA540078457F /* Main */,
+				F3A5A22726D0EA5E0078457F /* Views */,
+				F3A5A22526D0EA430078457F /* Resources */,
 				F3A5A21F26D0E9DA0078457F /* Info.plist */,
-				F3A5A21C26D0E9DA0078457F /* iTunesStore.xcdatamodeld */,
 				F3A5A21726D0E9DA0078457F /* Preview Content */,
 			);
 			path = iTunesStore;
@@ -73,6 +71,32 @@
 				F3A5A21826D0E9DA0078457F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F3A5A22526D0EA430078457F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F3A5A21526D0E9DA0078457F /* Assets.xcassets */,
+				F3A5A21C26D0E9DA0078457F /* iTunesStore.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F3A5A22626D0EA540078457F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F3A5A21126D0E9D90078457F /* iTunesStoreApp.swift */,
+				F3A5A21A26D0E9DA0078457F /* Persistence.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F3A5A22726D0EA5E0078457F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3A5A21326D0E9D90078457F /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
