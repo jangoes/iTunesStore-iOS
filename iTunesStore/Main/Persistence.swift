@@ -43,6 +43,7 @@ struct PersistenceController {
         newTrack.genre = track.primaryGenreName
         newTrack.trackPrice = track.trackPrice ?? 0
         newTrack.trackDescription = track.longDescription ?? track.shortDescription ?? track.description
+        newTrack.dateOpened = Date()
         
         saveContext()
         
@@ -51,18 +52,35 @@ struct PersistenceController {
         }
     }
     
+    // - Update track
+    func updateRecentTrack(track: Track, completion: @escaping () -> Void) {
+        if let savedTrack = fetchRecentTaskDataObject().filter({ $0.trackName == track.trackName }).first {
+            savedTrack.dateOpened = Date()
+            
+            saveContext()
+            
+            DispatchQueue.main.async {
+                completion()
+            }
+        }
+    }
+    
     // - Fetch Recent Track
     func fetchRecentTracks() -> [Track] {
+        return fetchRecentTaskDataObject().map { $0.convertToTrack() }
+    }
+    
+    func fetchRecentTaskDataObject() -> [RecentTrack] {
         let request = NSFetchRequest<RecentTrack>(entityName: "RecentTrack")
         
         do {
-            let response = try container.viewContext.fetch(request)
-            return response.map { $0.convertToTrack() }
+            let response = try container.viewContext.fetch(request).sorted(by: { $0.dateOpened! > $1.dateOpened! })
+            return response
         } catch let error {
             print("Error: \(error.localizedDescription)")
         }
         
-        return [Track]()
+        return [RecentTrack]()
     }
     
     // - Save Changes
@@ -80,15 +98,8 @@ struct PersistenceController {
     // !!! WARNING: USE FOR TESTING PURPOSES ONLY !!!
     // Delete all track data
     func deleteAllTracks() {
-        let request = NSFetchRequest<RecentTrack>(entityName: "RecentTrack")
-        
-        do {
-            let response = try container.viewContext.fetch(request)
-            response.forEach { track in
-                container.viewContext.delete(track)
-            }
-        } catch let error {
-            print("Error: \(error.localizedDescription)")
+        fetchRecentTaskDataObject().forEach {
+            container.viewContext.delete($0)
         }
         
         saveContext()

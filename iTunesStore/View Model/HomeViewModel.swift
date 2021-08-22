@@ -63,9 +63,9 @@ class HomeViewModel: ObservableObject {
         
         /// add to persistence if item does not exist
         if !alreadyExist {
-            PersistenceController.shared.addToRecentTrack(track: track) {
-                self.createRecentSection()
-            }
+            PersistenceController.shared.addToRecentTrack(track: track, completion: createRecentSection)
+        } else {
+            PersistenceController.shared.updateRecentTrack(track: track, completion: createRecentSection)
         }
         
         showDetailView = true

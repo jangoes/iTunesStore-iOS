@@ -21,6 +21,7 @@ struct Track: Hashable, Decodable {
     let primaryGenreName: String
     let trackPrice: Double?
     let description, shortDescription, longDescription: String?
+    var dateOpened: String?
     
     enum CodingKeys: String, CodingKey {
         case trackName

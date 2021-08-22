@@ -34,12 +34,23 @@ struct MediumCarouselContentView: View {
                     .padding(.top, 3)
             }
             
-            if let trackprice = trackItem.trackPrice {
-                Text("$ \(String(format: "%.2f", trackprice))")
-                    .font(.footnote)
-                    .foregroundColor(DCColor.smallListContentFootnote.color)
-                    .padding(.top, 5.5)
+            HStack {
+                if let trackprice = trackItem.trackPrice {
+                    Text("$ \(String(format: "%.2f", trackprice))")
+                        .font(.footnote)
+                        .foregroundColor(DCColor.smallListContentFootnote.color)
+                }
+                
+                Spacer()
+                
+                if let dateOpened = trackItem.dateOpened {
+                    Text("Visited at \(dateOpened)")
+                        .font(.caption2)
+                        .foregroundColor(DCColor.smallListContentFootnote.color)
+                        .padding(.trailing, 10)
+                }
             }
+            .padding(.top, 5.5)
         }
         .frame(width: 254, height: 231, alignment: .center)
     }

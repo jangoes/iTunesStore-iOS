@@ -9,10 +9,19 @@ import Foundation
 
 extension RecentTrack {
     func convertToTrack() -> Track {
-        Track(trackName: trackName,
-              imageURL: imageUrl ?? "",
-              primaryGenreName: genre ?? "",
-              trackPrice: trackPrice,
-              description: trackDescription, shortDescription: nil, longDescription: nil)
+        var dateString: String?
+        
+        if let dateOpened = dateOpened {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "MM/dd/yyyy"
+            dateString = formatter.string(from: dateOpened)
+        }
+        
+        return Track(trackName: trackName,
+                     imageURL: imageUrl ?? "",
+                     primaryGenreName: genre ?? "",
+                     trackPrice: trackPrice,
+                     description: trackDescription, shortDescription: nil, longDescription: nil,
+                     dateOpened: dateString)
     }
 }

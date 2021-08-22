@@ -14,7 +14,8 @@ final class MockTrackItems {
                              trackPrice: 16.50,
                              description: "From Director Justin Lin and Producer J.J. Abrams comes one of the best-reviewed action movies of",
                              shortDescription: "From Director Justin Lin and Producer J.J. Abrams comes one of the best-reviewed action movies of",
-                             longDescription: "From Director Justin Lin and Producer J.J. Abrams comes one of the best-reviewed action movies of")
+                             longDescription: "From Director Justin Lin and Producer J.J. Abrams comes one of the best-reviewed action movies of",
+                             dateOpened: "01/01/21")
 
     static let track2 = Track(trackName: "Star Wars: The Last Jedi",
                              imageURL: "https://is5-ssl.mzstatic.com/image/thumb/Music125/v4/4f/f3/76/4ff37694-4bbb-7769-f3b2-6574a60fd3ae/source/300x300bb.jpg",
