@@ -2,34 +2,16 @@
 //  Persistence.swift
 //  iTunesStore
 //
-//  Created by RemotoDojo on 8/21/21.
+//  Created by John Ellie Go on 8/21/21.
 //
 
 import CoreData
 
 struct PersistenceController {
     static let shared = PersistenceController()
-
-    static var preview: PersistenceController = {
-        let result = PersistenceController(inMemory: true)
-        let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-        }
-        do {
-            try viewContext.save()
-        } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            let nsError = error as NSError
-            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-        }
-        return result
-    }()
-
+    
     let container: NSPersistentContainer
-
+    
     init(inMemory: Bool = false) {
         container = NSPersistentContainer(name: "iTunesStore")
         if inMemory {
@@ -51,5 +33,64 @@ struct PersistenceController {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
+    }
+    
+    // - Add item to RecentTrack
+    func addToRecentTrack(track: Track, completion: @escaping () -> Void) {
+        let newTrack = RecentTrack(context: container.viewContext)
+        newTrack.trackName = track.trackName
+        newTrack.imageUrl = track.imageURL
+        newTrack.genre = track.primaryGenreName
+        newTrack.trackPrice = track.trackPrice ?? 0
+        newTrack.trackDescription = track.longDescription ?? track.shortDescription ?? track.description
+        
+        saveContext()
+        
+        DispatchQueue.main.async {
+            completion()
+        }
+    }
+    
+    // - Fetch Recent Track
+    func fetchRecentTracks() -> [Track] {
+        let request = NSFetchRequest<RecentTrack>(entityName: "RecentTrack")
+        
+        do {
+            let response = try container.viewContext.fetch(request)
+            return response.map { $0.convertToTrack() }
+        } catch let error {
+            print("Error: \(error.localizedDescription)")
+        }
+        
+        return [Track]()
+    }
+    
+    // - Save Changes
+    func saveContext() {
+        let context = container.viewContext
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch let error {
+                print("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    // !!! WARNING: USE FOR TESTING PURPOSES ONLY !!!
+    // Delete all track data
+    func deleteAllTracks() {
+        let request = NSFetchRequest<RecentTrack>(entityName: "RecentTrack")
+        
+        do {
+            let response = try container.viewContext.fetch(request)
+            response.forEach { track in
+                container.viewContext.delete(track)
+            }
+        } catch let error {
+            print("Error: \(error.localizedDescription)")
+        }
+        
+        saveContext()
     }
 }

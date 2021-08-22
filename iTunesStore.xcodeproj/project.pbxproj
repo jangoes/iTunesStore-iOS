@@ -7,23 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F30CFAA426D251BF00A9A62B /* RecentTrack+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30CFAA326D251BF00A9A62B /* RecentTrack+Extension.swift */; };
+		F376900826D2311A008EE2CA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F376900726D2311A008EE2CA /* HomeViewModel.swift */; };
+		F376900A26D23B4B008EE2CA /* TrackDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F376900926D23B4B008EE2CA /* TrackDetailView.swift */; };
+		F376900C26D2404F008EE2CA /* TrackDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F376900B26D2404F008EE2CA /* TrackDetailViewModel.swift */; };
+		F394086526D12931002B945C /* ContentSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F394086426D12931002B945C /* ContentSectionView.swift */; };
+		F394086726D13E20002B945C /* ContentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F394086626D13E20002B945C /* ContentSection.swift */; };
 		F3A5A21226D0E9D90078457F /* iTunesStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5A21126D0E9D90078457F /* iTunesStoreApp.swift */; };
-		F3A5A21426D0E9D90078457F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5A21326D0E9D90078457F /* ContentView.swift */; };
 		F3A5A21626D0E9DA0078457F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3A5A21526D0E9DA0078457F /* Assets.xcassets */; };
 		F3A5A21926D0E9DA0078457F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3A5A21826D0E9DA0078457F /* Preview Assets.xcassets */; };
 		F3A5A21B26D0E9DA0078457F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5A21A26D0E9DA0078457F /* Persistence.swift */; };
 		F3A5A21E26D0E9DA0078457F /* iTunesStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3A5A21C26D0E9DA0078457F /* iTunesStore.xcdatamodeld */; };
+		F3A5A23126D0EC5A0078457F /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5A22D26D0EC5A0078457F /* AsyncImage.swift */; };
+		F3A5A23226D0EC5A0078457F /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5A22E26D0EC5A0078457F /* ImageCache.swift */; };
+		F3A5A23326D0EC5A0078457F /* EnvironmentValues+ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5A22F26D0EC5A0078457F /* EnvironmentValues+ImageCache.swift */; };
+		F3A5A23426D0EC5A0078457F /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5A23026D0EC5A0078457F /* ImageLoader.swift */; };
+		F3A5A23726D0EC800078457F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5A23626D0EC800078457F /* HomeView.swift */; };
+		F3A5A23A26D0ED5E0078457F /* MediumCarouselContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5A23826D0ED5D0078457F /* MediumCarouselContentView.swift */; };
+		F3A5A23B26D0ED5E0078457F /* MediumListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5A23926D0ED5D0078457F /* MediumListContentView.swift */; };
+		F3A5A23F26D0ED970078457F /* TrackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5A23E26D0ED970078457F /* TrackList.swift */; };
+		F3A5A24226D0F24F0078457F /* DCColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5A24026D0F24F0078457F /* DCColor.swift */; };
+		F3A5A24326D0F24F0078457F /* DCColors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3A5A24126D0F24F0078457F /* DCColors.xcassets */; };
+		F3A5A24926D0FC3B0078457F /* APIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5A24826D0FC3B0078457F /* APIResource.swift */; };
+		F3A5A24B26D0FCC70078457F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5A24A26D0FCC70078457F /* APIClient.swift */; };
+		F3A5A24F26D102B20078457F /* MockTrackItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5A24E26D102B20078457F /* MockTrackItems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F30CFAA326D251BF00A9A62B /* RecentTrack+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecentTrack+Extension.swift"; sourceTree = "<group>"; };
+		F376900726D2311A008EE2CA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F376900926D23B4B008EE2CA /* TrackDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailView.swift; sourceTree = "<group>"; };
+		F376900B26D2404F008EE2CA /* TrackDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailViewModel.swift; sourceTree = "<group>"; };
+		F394086426D12931002B945C /* ContentSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSectionView.swift; sourceTree = "<group>"; };
+		F394086626D13E20002B945C /* ContentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSection.swift; sourceTree = "<group>"; };
 		F3A5A20E26D0E9D90078457F /* iTunesStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A5A21126D0E9D90078457F /* iTunesStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesStoreApp.swift; sourceTree = "<group>"; };
-		F3A5A21326D0E9D90078457F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F3A5A21526D0E9DA0078457F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3A5A21826D0E9DA0078457F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F3A5A21A26D0E9DA0078457F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		F3A5A21D26D0E9DA0078457F /* iTunesStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iTunesStore.xcdatamodel; sourceTree = "<group>"; };
 		F3A5A21F26D0E9DA0078457F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3A5A22D26D0EC5A0078457F /* AsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		F3A5A22E26D0EC5A0078457F /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		F3A5A22F26D0EC5A0078457F /* EnvironmentValues+ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+ImageCache.swift"; sourceTree = "<group>"; };
+		F3A5A23026D0EC5A0078457F /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		F3A5A23626D0EC800078457F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F3A5A23826D0ED5D0078457F /* MediumCarouselContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediumCarouselContentView.swift; sourceTree = "<group>"; };
+		F3A5A23926D0ED5D0078457F /* MediumListContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediumListContentView.swift; sourceTree = "<group>"; };
+		F3A5A23E26D0ED970078457F /* TrackList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackList.swift; sourceTree = "<group>"; };
+		F3A5A24026D0F24F0078457F /* DCColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCColor.swift; sourceTree = "<group>"; };
+		F3A5A24126D0F24F0078457F /* DCColors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DCColors.xcassets; sourceTree = "<group>"; };
+		F3A5A24826D0FC3B0078457F /* APIResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResource.swift; sourceTree = "<group>"; };
+		F3A5A24A26D0FCC70078457F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		F3A5A24E26D102B20078457F /* MockTrackItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTrackItems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +73,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F30CFAA526D251C300A9A62B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F30CFAA326D251BF00A9A62B /* RecentTrack+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F376900626D230FD008EE2CA /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				F376900726D2311A008EE2CA /* HomeViewModel.swift */,
+				F376900B26D2404F008EE2CA /* TrackDetailViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		F394086326D12909002B945C /* Container Views */ = {
+			isa = PBXGroup;
+			children = (
+				F394086426D12931002B945C /* ContentSectionView.swift */,
+			);
+			path = "Container Views";
+			sourceTree = "<group>";
+		};
 		F3A5A20526D0E9D90078457F = {
 			isa = PBXGroup;
 			children = (
@@ -57,7 +118,13 @@
 			isa = PBXGroup;
 			children = (
 				F3A5A22626D0EA540078457F /* Main */,
-				F3A5A22726D0EA5E0078457F /* Views */,
+				F3A5A23D26D0ED820078457F /* Model */,
+				F3A5A22726D0EA5E0078457F /* View */,
+				F376900626D230FD008EE2CA /* View Model */,
+				F3A5A25026D103F80078457F /* Preview Data */,
+				F3A5A24726D0FC280078457F /* Network */,
+				F3A5A22C26D0EC210078457F /* Helpers */,
+				F30CFAA526D251C300A9A62B /* Extension */,
 				F3A5A22526D0EA430078457F /* Resources */,
 				F3A5A21F26D0E9DA0078457F /* Info.plist */,
 				F3A5A21726D0E9DA0078457F /* Preview Content */,
@@ -76,7 +143,8 @@
 		F3A5A22526D0EA430078457F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F3A5A21526D0E9DA0078457F /* Assets.xcassets */,
+				F3A5A24426D0F2600078457F /* Color */,
+				F3A5A24526D0F2700078457F /* Image */,
 				F3A5A21C26D0E9DA0078457F /* iTunesStore.xcdatamodeld */,
 			);
 			path = Resources;
@@ -91,12 +159,94 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		F3A5A22726D0EA5E0078457F /* Views */ = {
+		F3A5A22726D0EA5E0078457F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F3A5A21326D0E9D90078457F /* ContentView.swift */,
+				F3A5A23C26D0ED610078457F /* Card Views */,
+				F394086326D12909002B945C /* Container Views */,
+				F3A5A24626D0FB120078457F /* Screen Views */,
 			);
-			path = Views;
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3A5A22C26D0EC210078457F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F3A5A23526D0EC640078457F /* AsyncImage */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F3A5A23526D0EC640078457F /* AsyncImage */ = {
+			isa = PBXGroup;
+			children = (
+				F3A5A22D26D0EC5A0078457F /* AsyncImage.swift */,
+				F3A5A22F26D0EC5A0078457F /* EnvironmentValues+ImageCache.swift */,
+				F3A5A22E26D0EC5A0078457F /* ImageCache.swift */,
+				F3A5A23026D0EC5A0078457F /* ImageLoader.swift */,
+			);
+			path = AsyncImage;
+			sourceTree = "<group>";
+		};
+		F3A5A23C26D0ED610078457F /* Card Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3A5A23826D0ED5D0078457F /* MediumCarouselContentView.swift */,
+				F3A5A23926D0ED5D0078457F /* MediumListContentView.swift */,
+			);
+			path = "Card Views";
+			sourceTree = "<group>";
+		};
+		F3A5A23D26D0ED820078457F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F3A5A23E26D0ED970078457F /* TrackList.swift */,
+				F394086626D13E20002B945C /* ContentSection.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3A5A24426D0F2600078457F /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				F3A5A24026D0F24F0078457F /* DCColor.swift */,
+				F3A5A24126D0F24F0078457F /* DCColors.xcassets */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		F3A5A24526D0F2700078457F /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				F3A5A21526D0E9DA0078457F /* Assets.xcassets */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		F3A5A24626D0FB120078457F /* Screen Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3A5A23626D0EC800078457F /* HomeView.swift */,
+				F376900926D23B4B008EE2CA /* TrackDetailView.swift */,
+			);
+			path = "Screen Views";
+			sourceTree = "<group>";
+		};
+		F3A5A24726D0FC280078457F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F3A5A24826D0FC3B0078457F /* APIResource.swift */,
+				F3A5A24A26D0FCC70078457F /* APIClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F3A5A25026D103F80078457F /* Preview Data */ = {
+			isa = PBXGroup;
+			children = (
+				F3A5A24E26D102B20078457F /* MockTrackItems.swift */,
+			);
+			path = "Preview Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +308,7 @@
 			files = (
 				F3A5A21926D0E9DA0078457F /* Preview Assets.xcassets in Resources */,
 				F3A5A21626D0E9DA0078457F /* Assets.xcassets in Resources */,
+				F3A5A24326D0F24F0078457F /* DCColors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,9 +319,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F376900826D2311A008EE2CA /* HomeViewModel.swift in Sources */,
+				F3A5A24F26D102B20078457F /* MockTrackItems.swift in Sources */,
+				F3A5A23B26D0ED5E0078457F /* MediumListContentView.swift in Sources */,
+				F376900A26D23B4B008EE2CA /* TrackDetailView.swift in Sources */,
+				F30CFAA426D251BF00A9A62B /* RecentTrack+Extension.swift in Sources */,
+				F3A5A23726D0EC800078457F /* HomeView.swift in Sources */,
+				F3A5A24226D0F24F0078457F /* DCColor.swift in Sources */,
+				F3A5A23226D0EC5A0078457F /* ImageCache.swift in Sources */,
+				F3A5A24926D0FC3B0078457F /* APIResource.swift in Sources */,
+				F3A5A23126D0EC5A0078457F /* AsyncImage.swift in Sources */,
+				F3A5A23326D0EC5A0078457F /* EnvironmentValues+ImageCache.swift in Sources */,
 				F3A5A21B26D0E9DA0078457F /* Persistence.swift in Sources */,
+				F3A5A24B26D0FCC70078457F /* APIClient.swift in Sources */,
+				F3A5A23F26D0ED970078457F /* TrackList.swift in Sources */,
+				F394086726D13E20002B945C /* ContentSection.swift in Sources */,
+				F3A5A23A26D0ED5E0078457F /* MediumCarouselContentView.swift in Sources */,
 				F3A5A21E26D0E9DA0078457F /* iTunesStore.xcdatamodeld in Sources */,
-				F3A5A21426D0E9D90078457F /* ContentView.swift in Sources */,
+				F394086526D12931002B945C /* ContentSectionView.swift in Sources */,
+				F376900C26D2404F008EE2CA /* TrackDetailViewModel.swift in Sources */,
+				F3A5A23426D0EC5A0078457F /* ImageLoader.swift in Sources */,
 				F3A5A21226D0E9D90078457F /* iTunesStoreApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,7 +2,7 @@
 //  iTunesStoreApp.swift
 //  iTunesStore
 //
-//  Created by RemotoDojo on 8/21/21.
+//  Created by John Ellie Go on 8/21/21.
 //
 
 import SwiftUI
@@ -13,7 +13,7 @@ struct iTunesStoreApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
