@@ -12,10 +12,12 @@ enum UserDefaultsKey: String {
 }
 
 extension UserDefaults {
+    /// setter for - didOpenDetailView
     func didOpenDetailView(value: Bool) {
         setValue(value, forKey: UserDefaultsKey.didOpenDetailView.rawValue)
     }
     
+    /// getter for - didOpenDetailView
     var didOpenDetailView: Bool {
         bool(forKey: UserDefaultsKey.didOpenDetailView.rawValue)
     }
