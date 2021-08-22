@@ -2,7 +2,7 @@
 //  RecentTrack+Extension.swift
 //  iTunesStore
 //
-//  Created by RemotoDojo on 8/22/21.
+//  Created by John Ellie Go on 8/22/21.
 //
 
 import Foundation

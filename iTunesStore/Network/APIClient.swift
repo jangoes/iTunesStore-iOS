@@ -2,7 +2,7 @@
 //  APIClient.swift
 //  iTunesStore
 //
-//  Created by RemotoDojo on 8/21/21.
+//  Created by John Ellie Go on 8/21/21.
 //
 
 import Foundation
