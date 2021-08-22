@@ -9,11 +9,14 @@ import SwiftUI
 import Combine
 
 class HomeViewModel: ObservableObject {
-    @Published var isFetching = false
     @Published var contentSections = [ContentSectionModel]()
+    @Published var isFetching = false
     @Published var showDetailView = false
     
+    /// publisher for selected item used in ContentSectionView
     var selectedTrack = PassthroughSubject<Track, Never>()
+    
+    /// view model for detail view
     var detailViewModel: TrackDetailViewModel?
     
     private var isFirstLoad = true
@@ -36,6 +39,7 @@ class HomeViewModel: ObservableObject {
         guard !isFetching else { return }
         isFetching = true
         
+        /// create resource
         let resource = TrackListResource()
         request = APIClient(using: resource)
         
@@ -62,12 +66,14 @@ class HomeViewModel: ObservableObject {
     func openTrack(track: Track) {
         detailViewModel = TrackDetailViewModel(track: track)
         
+        /// filter first section (core data item value) + get first item and check if trackName matches with param value
         let hasExistingTrackName = contentSections.first?.items.filter {
             $0.trackName == track.trackName
         }
         .first?
         .trackName == track.trackName
         
+        /// check if item already exist
         let alreadyExist = isDataLoaded ? contentSections.count == 2 && hasExistingTrackName : contentSections.count <= 2 && hasExistingTrackName
 
         /// add to persistence if item does not exist
@@ -77,6 +83,7 @@ class HomeViewModel: ObservableObject {
             PersistenceController.shared.updateRecentTrack(track: track, completion: createRecentSection)
         }
         
+        /// show detail view
         showDetailView = true
     }
     

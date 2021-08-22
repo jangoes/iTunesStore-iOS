@@ -10,6 +10,7 @@ import SwiftUI
 class TrackDetailViewModel: ObservableObject {
     let track: Track
     
+    /// device screen bounds
     let fullScreenWidth = UIScreen.main.bounds.width
     let fullScreenHeight = UIScreen.main.bounds.height
     
