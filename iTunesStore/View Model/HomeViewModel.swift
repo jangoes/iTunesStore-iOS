@@ -16,6 +16,8 @@ class HomeViewModel: ObservableObject {
     var selectedTrack = PassthroughSubject<Track, Never>()
     var detailViewModel: TrackDetailViewModel?
     
+    private var isFirstLoad = true
+    private var isDataLoaded = false
     private var request: APIClient<TrackListResource>?
     private var bag = Set<AnyCancellable>()
     
@@ -47,6 +49,8 @@ class HomeViewModel: ObservableObject {
                 case .failure(let error):
                     print(error.localizedDescription)
                 }
+                
+                self.isDataLoaded = true
             } receiveValue: { data in
                 let section = ContentSectionModel(trackList: data)
                 self.contentSections.append(section)
@@ -58,9 +62,14 @@ class HomeViewModel: ObservableObject {
     func openTrack(track: Track) {
         detailViewModel = TrackDetailViewModel(track: track)
         
-        let hasExistingTrackName = contentSections.first?.items.filter { $0.trackName == track.trackName }.first?.trackName == track.trackName
-        let alreadyExist = contentSections.count > 1 && hasExistingTrackName
+        let hasExistingTrackName = contentSections.first?.items.filter {
+            $0.trackName == track.trackName
+        }
+        .first?
+        .trackName == track.trackName
         
+        let alreadyExist = isDataLoaded ? contentSections.count == 2 && hasExistingTrackName : contentSections.count <= 2 && hasExistingTrackName
+
         /// add to persistence if item does not exist
         if !alreadyExist {
             PersistenceController.shared.addToRecentTrack(track: track, completion: createRecentSection)
@@ -81,10 +90,30 @@ class HomeViewModel: ObservableObject {
                                                 items: tracks)
         
         withAnimation {
-            if contentSections.count > 1 {
-                contentSections[0] = recentSection
-            } else {
+            if contentSections.count <= 1, isDataLoaded {
                 contentSections.insert(recentSection, at: 0)
+            } else if contentSections.count == 0, !isDataLoaded {
+                contentSections.insert(recentSection, at: 0)
+            } else {
+                contentSections[0] = recentSection
+            }
+            
+            if isFirstLoad {
+                isFirstLoad = false
+                
+                /// - recover previous view state
+                if UserDefaults.standard.didOpenDetailView {
+                    recoverPreviousView()
+                }
+            }
+        }
+    }
+    
+    // - recover previous view
+    func recoverPreviousView() {
+        if contentSections[0].items.count > 0 {
+            if let lastTrackOpened = contentSections[0].items.first {
+                openTrack(track: lastTrackOpened)
             }
         }
     }

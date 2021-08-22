@@ -48,6 +48,9 @@ struct TrackDetailView: View {
                 Spacer()
             }
         }
+        .onDisappear {
+            UserDefaults.standard.didOpenDetailView(value: false)
+        }
         .navigationBarTitle("", displayMode: .inline)
     }
 }

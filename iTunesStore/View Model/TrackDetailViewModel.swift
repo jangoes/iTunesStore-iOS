@@ -29,5 +29,6 @@ class TrackDetailViewModel: ObservableObject {
     
     init(track: Track) {
         self.track = track
+        UserDefaults.standard.didOpenDetailView(value: true)
     }
 }

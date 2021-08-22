@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F30CFAA426D251BF00A9A62B /* RecentTrack+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30CFAA326D251BF00A9A62B /* RecentTrack+Extension.swift */; };
+		F30CFAA726D2716900A9A62B /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30CFAA626D2716900A9A62B /* UserDefaults+Extension.swift */; };
 		F376900826D2311A008EE2CA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F376900726D2311A008EE2CA /* HomeViewModel.swift */; };
 		F376900A26D23B4B008EE2CA /* TrackDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F376900926D23B4B008EE2CA /* TrackDetailView.swift */; };
 		F376900C26D2404F008EE2CA /* TrackDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F376900B26D2404F008EE2CA /* TrackDetailViewModel.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		F30CFAA326D251BF00A9A62B /* RecentTrack+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecentTrack+Extension.swift"; sourceTree = "<group>"; };
+		F30CFAA626D2716900A9A62B /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		F376900726D2311A008EE2CA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F376900926D23B4B008EE2CA /* TrackDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailView.swift; sourceTree = "<group>"; };
 		F376900B26D2404F008EE2CA /* TrackDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailViewModel.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				F30CFAA326D251BF00A9A62B /* RecentTrack+Extension.swift */,
+				F30CFAA626D2716900A9A62B /* UserDefaults+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				F3A5A21B26D0E9DA0078457F /* Persistence.swift in Sources */,
 				F3A5A24B26D0FCC70078457F /* APIClient.swift in Sources */,
 				F3A5A23F26D0ED970078457F /* TrackList.swift in Sources */,
+				F30CFAA726D2716900A9A62B /* UserDefaults+Extension.swift in Sources */,
 				F394086726D13E20002B945C /* ContentSection.swift in Sources */,
 				F3A5A23A26D0ED5E0078457F /* MediumCarouselContentView.swift in Sources */,
 				F3A5A21E26D0E9DA0078457F /* iTunesStore.xcdatamodeld in Sources */,
